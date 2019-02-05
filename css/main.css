@@ -36,6 +36,14 @@ a {
     padding:0;
     list-style-type:none;
 }
+
+.items .item.done {
+    text-decoration:line-through;
+}
+.items li:hover .done-button {
+    opacity:1
+}
+
 .items li{
  .item-add .input
 border:0;
@@ -43,7 +51,9 @@ border:0;
     padding: 15px 0;
 
 }
-
+.input {
+    width:100%;
+}
 
 .input:focus {
     outline:none;
@@ -57,4 +67,17 @@ color:#363639;
     padding:3px 6px;
     border:0;
     opacity:0.4;
+}
+
+
+/* SUBMIT BUTTON */
+
+.submit {
+    background-color:#fff;
+    padding:5px 10px;
+    border: 1px solid #ddd;
+    width:100%;
+    margin-top:10px ;
+    box-shadow:3px 3px 0 #ddd;
+
 }

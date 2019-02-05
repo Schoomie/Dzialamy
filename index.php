@@ -1,3 +1,19 @@
+<?php
+
+require_once 'app/init.php';
+
+$itemsQuery = $db->prepare("
+        SELECT id,name,done
+        FROM items
+        WHERE user =: user 
+        "
+);
+$itemsquery->execute([
+        'user' => $_SESSION['user_id']
+]);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
