@@ -8,13 +8,19 @@ $itemsQuery = $db->prepare("
         WHERE user = :user
         "
 );
-$itemsQuery->bindParam(':user', $_SESSION['user_id'], PDO::PARAM_INT);
 
 
-$itemsQuery->execute();
+$itemsQuery->execute(
+        [
+                'user'=> $_SESSION['user_id']
+        ]
+);
 
-$items = $itemsQuery->fetchAll(PDO::FETCH_ASSOC);
+$items = $itemsQuery->rowCount () ? $itemsQuery : [];
 
+foreach($items as $item) {
+    echo $item['name'], '<br>';
+}
 
 // var_dump();
 // die();
@@ -44,7 +50,7 @@ $items = $itemsQuery->fetchAll(PDO::FETCH_ASSOC);
     <ul class="items">
         <?php foreach($items as $item): ?>
         <li>
-            <span class="item<?php echo$item['done'] ? 'done' : '' ?>"><?php echo $item['name']; ?></span>
+            <span class="item<?php echo $item['done'] ? 'done' : '' ?>"><?php echo $item['name']; ?></span>
             <?php if(!$item['done']): ?>
             <a href="#" class="done-button">Mark as done</a>
             <?php endif; ?>
