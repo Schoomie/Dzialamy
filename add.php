@@ -8,7 +8,7 @@ if(isset($_POST['name'])){
     if(!empty($name)){
         $addedQuery = $db->prepare("
         INSERT INTO items (name,user,done,created)
-        VALUES (:name, :user, 0 )
+        VALUES (:name, :user, 0,NOW() )
         ");
     $addedQuery->execute([
        'name'=>$name,
