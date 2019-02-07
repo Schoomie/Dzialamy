@@ -18,14 +18,12 @@ if (isset($GET['as'], $_GET['item'])) {
  
  
         ");
-$doneQuery->execute([
-    'item'=> $item,
-    'user'=>$_SESSION['user_id']
-]);
-break;
-
+            $doneQuery->execute([
+                'item' => $item,
+                'user' => $_SESSION['user_id']
+            ]);
+            break;
     }
-
 }
 
 header('Location:index.php');
