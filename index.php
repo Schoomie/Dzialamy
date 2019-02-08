@@ -10,14 +10,17 @@ $items = $itemsQuery->rowCount() ? $itemsQuery : [];
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>To do</title>
+    <title>To do
+    </title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="style.css"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <div class="list">
+
     <h1 class="header">To do.</h1>
 
     <?php if(!empty($items)): ?>
@@ -43,6 +46,18 @@ $items = $itemsQuery->rowCount() ? $itemsQuery : [];
         <input type="submit" value="Add" class="submit">
     </form>
 </div>
+<h2>
+    <button>Switch Color</button>
+    <script type="text/javascript">
+   var color =["#ffff00","#cc6699","#cc00ff","#3333cc","#0099cc","#00cc66","#663300","#ccccff","#99ffcc"];
+var i=0;
+document.querySelector("button").addEventListener("click",function(){
+    i = i < color.length ? ++i : 0;
+    document.querySelector("body").style.background = color[i]
+})
+    </script>
 
+</h2>
 </body>
+
 </html>

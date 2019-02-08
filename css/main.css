@@ -1,7 +1,18 @@
 body {
     background-color: #eceff0;
 }
-
+button
+{
+   position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    background: #9ff3ff;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    cursor: pointer;
+}
 body,
 input {
     font: 1em "Open Sans", sans-serif;
@@ -101,6 +112,7 @@ a {
     width: 100%;
     margin-top: 10px;
     box-shadow: 3px 3px 0 #ddd;
+    cursor: pointer;
 }
 
 .submit:active {
