@@ -13,5 +13,5 @@ if(isset($_POST['name'])){
         ]);
     }
 }
-header('Location: index.php');
+header('Location: serceprogramu.php');
 ?>

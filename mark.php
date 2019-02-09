@@ -41,5 +41,5 @@ if(isset($_GET['as'], $_GET['item'])){
             break;
     }
 }
-header('Location: index.php')
+header('Location: serceprogramu.php')
 ?>
