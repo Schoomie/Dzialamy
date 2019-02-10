@@ -41,7 +41,11 @@ $_SESSION['user_id'] =$win;
 
 if(!isset($_SESSION['user_id'])){
     die('you are not signed in');
+
 }
+?>
+
+
 
 
 
