@@ -24,8 +24,8 @@ $query->setFetchMode(PDO::FETCH_ASSOC);
 $query->execute();
 $lala=0;
 while($row=$query->fetch()){
-
- $win=$row['id'];
+ echo "
+ ".$row['id']."<br>";
 
 
 
@@ -37,15 +37,11 @@ while($row=$query->fetch()){
 
 
 
-$_SESSION['user_id'] =$win;
+$_SESSION['user_id'] =1;
 
 if(!isset($_SESSION['user_id'])){
     die('you are not signed in');
-
 }
-?>
-
-
 
 
 

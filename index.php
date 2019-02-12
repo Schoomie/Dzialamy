@@ -134,18 +134,18 @@
 
 <div id="id01" class="modal">
 
-    <form class="modal-content animate" action="/serceprogramu.php" method="post">
+    <form class="modal-content animate" action="/serceprogramu.php">
         <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             <img src="img_avatar2.png" alt="Avatar" class="avatar">
         </div>
 
         <div class="container">
-            <label for="login"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="login" required>
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
 
-            <label for="haslo"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="haslo" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
 
             <button type="submit">Login</button>
 
@@ -153,28 +153,33 @@
 
         <div class="container" style="background-color:#f1f1f1">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-
+            <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
     </form>
 </div>
 
-<form action="addnewmember.php">
+<form action="action_page.php">
     <div class="container">
         <h1>Register</h1>
         <p>Please fill in this form to create an account.</p>
         <hr>
 
-        <label for="Name"><b>Email</b></label>
-        <input type="text" placeholder="Enter Name" name="email" required>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
 
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
 
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+        <hr>
 
         <button type="submit" class="registerbtn">Register</button>
     </div>
 
-    
+    <div class="container signin">
+        <p>Already have an account? <a href="#">Log in</a>.</p>
+    </div>
 </form>
 
 </body>
